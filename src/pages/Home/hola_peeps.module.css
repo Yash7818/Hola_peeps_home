@@ -1,0 +1,151 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap'); */
+#root{
+    background: #000;
+}
+
+
+.maintext{
+    padding:0em 0em 1em 0em;
+    /* font-size:5em; */
+}
+
+.tiltimage{
+    max-width: 35em;
+}
+.footersec{
+    width:70%;
+}
+.socialLink{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.vector_6{
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    animation: animate 1.2s infinite ease-in-out;
+}
+.vector_5{
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    animation: animateo 1s infinite ease-in-out;
+}
+.vector_4{
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    animation: animatei 1s infinite ease-in-out;
+}
+
+
+
+@keyframes animate{
+    0%{
+        transform:scaleY(1);
+    }
+    50%{
+        transform: scaleY(1.5);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+@keyframes animateo{
+    0%{
+        transform:scaleY(1);
+    }
+    50%{
+        transform: scaleY(0.5);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+@keyframes animatei{
+    0%{
+        transform:scaleY(1);
+    }
+    50%{
+        transform: scaleY(2);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+
+@media (max-width:1456px) and (min-width:1425px) {
+    .socialLink{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+}
+
+@media (max-width:1400px) {
+    .containmain{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1310px) {
+    .containmain{
+        display: flex;
+        flex-direction: column;
+    }
+    .tiltimage{
+        max-width: 25em;
+    }
+   
+}
+@media (max-width:1230px){
+    .containmain{
+        display: flex;
+        flex-direction: column;
+    }
+    .tiltimage{
+        max-width: 25em;
+    }
+    .maintext{
+        font-size: 3em;
+    }
+}
+@media (max-width:1050px) {
+    .containmain{
+        display: flex;
+        flex-direction: column;
+    }
+    .tiltimage{
+        max-width: 30em;
+    }
+}
+
+@media (max-width:600px) {
+    .footersec{
+        width: 100%;
+    }
+}
+
+@media (max-width:550px){
+    .tiltimage{
+        max-width: 25em;
+    }
+    .maintext{
+        font-size: 2.5em;
+    }
+}
+@media (max-width:545px){
+    .socialLink{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+  
+}
+@media (max-width:400px){
+    .tiltimage{
+        max-width: 20em;
+    }
+}

@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme)=>({
         [theme.breakpoints.down("sm")]:{
             fontSize:"2em"
         },
-        [theme.breakpoints.down("mobile")]:{
-            fontSize:"1em"
+        [theme.breakpoints.down("xs")]:{
+            fontSize:"1.5em"
         }
     },
     main:{
@@ -59,7 +59,25 @@ const useStyles = makeStyles((theme)=>({
             fontSize:"5em"
         },
         [theme.breakpoints.down("sm")]:{
+            fontSize:"4em"
+        },
+        [theme.breakpoints.down("xs")]:{
+            fontSize:"3.5em"
+        }
+    },
+    maintext1:{
+        color:"#fae10b",
+        fontWeight:"600",
+        textAlign:"center",
+        fontFamily:"Montserrat, sans-serif",
+        [theme.breakpoints.down("lg")]:{
             fontSize:"5em"
+        },
+        [theme.breakpoints.down("sm")]:{
+            fontSize:"3.5em"
+        },
+        [theme.breakpoints.down("xs")]:{
+            fontSize:"3em"
         }
     },
     hometext:{
@@ -95,7 +113,7 @@ const useStyles = makeStyles((theme)=>({
             paddingLeft:"0em",
             paddingTop:"1em"
         }
-    }
+    },
 }));
 
 
@@ -128,7 +146,7 @@ const Homepage = () =>{
                     Hang out
                 </Typography>
                 <Grid style={{textAlign:"center",alignContent:"center"}}>
-                 <svg width="300" height="540" viewBox="0 0 309 622" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <svg  width="300" height="540" viewBox="0 0 309 622" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="Group 155">
                 <path id="Vector" d="M303.66 98.4301H303.08V37.0001C303.08 27.2189 299.194 17.8384 292.278 10.922C285.362 4.00569 275.981 0.120117 266.2 0.120117H42.65C32.8688 0.120117 23.4882 4.00569 16.5719 10.922C9.65556 17.8384 5.77002 27.2189 5.77002 37.0001V98.4301H5.17999C3.90338 98.4328 2.67996 98.9418 1.7782 99.8454C0.876435 100.749 0.369992 101.974 0.369995 103.25V145.74C0.369995 147.016 0.876759 148.239 1.77881 149.141C2.68086 150.043 3.9043 150.55 5.17999 150.55H5.77002V160.69H5.17999C3.90511 160.693 2.68322 161.2 1.78174 162.102C0.88026 163.003 0.372637 164.225 0.369995 165.5V208C0.369995 209.276 0.876759 210.499 1.77881 211.401C2.68086 212.303 3.9043 212.81 5.17999 212.81H5.77002V585C5.77002 594.781 9.65556 604.162 16.5719 611.078C23.4882 617.995 32.8688 621.88 42.65 621.88H266.2C275.981 621.88 285.362 617.995 292.278 611.078C299.194 604.162 303.08 594.781 303.08 585V176.62H303.66C304.938 176.62 306.164 176.112 307.068 175.208C307.972 174.304 308.48 173.078 308.48 171.8V103.25C308.48 101.972 307.972 100.746 307.068 99.8419C306.164 98.9379 304.938 98.4301 303.66 98.4301Z" fill="#F1D806"/>
                 <path id="Vector_2" d="M262.39 9.24023H46.45C29.9091 9.24023 16.5 22.6493 16.5 39.1902V582.77C16.5 599.311 29.9091 612.72 46.45 612.72H262.39C278.931 612.72 292.34 599.311 292.34 582.77V39.1902C292.34 22.6493 278.931 9.24023 262.39 9.24023Z" fill="#202020"/>
@@ -165,7 +183,7 @@ const Homepage = () =>{
             </Grid>
             <Grid container item direction="row" className={Styles.containmain} justify="space-between" style={{alignSelf:"center",textAlign:"center",alignContent:"center"}}>
                 <Grid item  justify="center" alignItems="center" className={classes.foottop} style={{textAlign:"center",alignSelf:"center"}}>
-                    <Typography variant="h2" color="primary" className={Styles.maintext} style={{fontWeight:"600",fontFamily:"Montserrat, sans-serif"}}>
+                    <Typography variant="h2"  className={classes.maintext1} >
                         Get HolaPeeps Mobile App
                     </Typography>
                     <Button>

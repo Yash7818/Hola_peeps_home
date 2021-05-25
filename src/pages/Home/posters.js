@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Carousel from 'nuka-carousel';
 import {makeStyles} from '@material-ui/core/styles';
@@ -29,7 +29,19 @@ const useStyles = makeStyles((theme)=>({
         fontWeight:"600",
     },
     image:{
-        maxWidth:"80%"
+        maxWidth:"80%",
+        [theme.breakpoints.down("xs")]:{
+            display:"none",
+        },
+    },
+    simage:{
+        display:"none",
+        maxWidth:"80%",
+        borderRadius:"1em",
+        [theme.breakpoints.down("xs")]:{
+            display:"inline",
+        },
+
     },
     simple:{
         width:"20px",
@@ -61,12 +73,18 @@ const Poster = () =>{
     const Fourth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280388/Holapeeps/Artboard_1_copyadd_vtib6q.png";
     const Fifth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280386/Holapeeps/Artboard_1_copy_5add_lzodgu.png";
     
+    const Mfirst = "https://res.cloudinary.com/marcos-yash/image/upload/v1621839541/Mobile/Artboard_1hp5_1_yx1n9f.jpg";
+    const Msecond = "https://res.cloudinary.com/marcos-yash/image/upload/v1621842553/Mobile/Artboard_1hp_1_ipifza.jpg";
+    const Mthird = "https://res.cloudinary.com/marcos-yash/image/upload/v1621840384/Mobile/Artboard_1hp3_uoaslc.jpg";
+    const Mfourth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621839677/Mobile/Artboard_1hp2_ues1fj.jpg";
+    const Mfifth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621931989/Mobile/Artboard_1hp6_1_lzkuty.jpg";
+
     const classes = useStyles();
 
     return (
         <>
             <Carousel className={classes.root} vertical="true" 
-                renderCenterLeftControls={({ previousSlide,currentSlide,slideCount,goToSlide}) => (
+                renderCenterLeftControls={({currentSlide,slideCount,goToSlide}) => (
                     <ul style={{padding:"1em 3em"}}>
                         {[...Array(slideCount)].map((key,index)=><li className={index==currentSlide?classes.active:classes.simple} onClick={()=>goToSlide(index)}><div></div></li>)}
                     </ul>
@@ -75,18 +93,23 @@ const Poster = () =>{
             >
                 <Grid container item justify="center" alignItems="center" style={{padding:"1em 0em"}}>
                     <img className={classes.image} src={First}></img>
+                    <img className={classes.simage} src={Mfirst}></img>
                 </Grid>
                 <Grid container item justify="center" alignItems="center" style={{padding:"1em 0em"}}>
                     <img className={classes.image} src={Second}></img>
+                    <img className={classes.simage} src={Msecond}></img>
                 </Grid>
                 <Grid container item justify="center" alignItems="center" style={{padding:"1em 0em"}}>
                     <img className={classes.image} src={Third}></img>
+                    <img className={classes.simage} src={Mthird}></img> 
                 </Grid>
                 <Grid container item justify="center" alignItems="center" style={{padding:"1em 0em"}}>
                     <img className={classes.image} src={Fourth}></img>
+                    <img className={classes.simage} src={Mfourth}></img>
                 </Grid>
                 <Grid container item justify="center" alignItems="center" style={{padding:"1em 0em"}}>
                     <img className={classes.image} src={Fifth}></img>
+                    <img className={classes.simage} src={Mfifth}></img>
                 </Grid>
             </Carousel>
         </>

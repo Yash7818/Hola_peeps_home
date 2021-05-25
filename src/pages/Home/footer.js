@@ -58,8 +58,12 @@ const useStyles = makeStyles((theme)=>({
         }
 
     },
-    footertext:{
-
+    copy:{
+        fontSize:"1.5em",
+        [theme.breakpoints.down("sm")]:{
+            fontSize:"1.2em",
+            padding:"1em"
+        }
     }
 }))
 
@@ -114,7 +118,7 @@ const Footer = () =>{
                 </Grid>
                 
             </Grid>
-            <Grid container item justify="center" style={{background:"#fae10b",fontSize:"1.5em"}}>
+            <Grid container item justify="center" className={classes.copy} style={{background:"#fae10b"}}>
                     Copyright @HolaPeeps 2021
             </Grid>
         </>

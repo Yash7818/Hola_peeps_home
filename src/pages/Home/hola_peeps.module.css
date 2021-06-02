@@ -126,6 +126,12 @@
     .footersec{
         width: 100%;
     }
+    .tiltimage{
+       display: none;
+    }
+    .containmain{
+        padding:3em 1em;
+    }
 }
 
 @media (max-width:550px){

@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme)=>({
         clipPath:"polygon(0 0, 100% 30%, 100% 100%, 0% 100%)",
         [theme.breakpoints.down("sm")]:{
             padding:"15em 0em 3em 0em",
+            clipPath:"polygon(0 0, 100% 10%, 100% 100%, 0% 100%)",
         }
     },
     input:{
@@ -71,7 +72,7 @@ const Footer = () =>{
     const classes = useStyles();
     return (
         <>
-            <Grid className={classes.root} container item justify="center">
+            <Grid className={classes.root} container item justify="space-around">
                 <Grid style={{textAlign:"center"}}>
                     <Typography style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600",fontSize:"2.5em"}}>
                         Have a question?
@@ -103,11 +104,11 @@ const Footer = () =>{
                         <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Press Kit</Typography>
                         <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Privacy Policy</Typography>
                     </Grid>
-                    <Grid>
+                    {/* <Grid>
                         <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Blog</Typography>
                         <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>FAQs</Typography>
                         <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Feature Request</Typography>
-                    </Grid>
+                    </Grid> */}
                 </Grid>
                 <Grid className={Styles.socialLink} style={{padding:"4em 0em 0em 0em"}}>
                     <FacebookIcon className={classes.social} />

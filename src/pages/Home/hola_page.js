@@ -56,13 +56,16 @@ const useStyles = makeStyles((theme)=>({
         textAlign:"center",
         fontFamily:"Montserrat, sans-serif",
         [theme.breakpoints.down("lg")]:{
-            fontSize:"5em"
+            fontSize:"5em",
+            margin:"1em 0em"
         },
         [theme.breakpoints.down("sm")]:{
-            fontSize:"4em"
+            fontSize:"3.5em",
+            margin:"1em 0em"
         },
         [theme.breakpoints.down("xs")]:{
-            fontSize:"3.5em"
+            fontSize:"3em",
+            margin:"1em 0em"
         }
     },
     maintext1:{
@@ -71,10 +74,13 @@ const useStyles = makeStyles((theme)=>({
         textAlign:"center",
         fontFamily:"Montserrat, sans-serif",
         [theme.breakpoints.down("lg")]:{
-            fontSize:"5em"
+            fontSize:"4em",
+            margin:"1em 0em"
         },
         [theme.breakpoints.down("sm")]:{
-            fontSize:"3.5em"
+            fontSize:"3.5em",
+            margin:"1em 0em"
+
         },
         [theme.breakpoints.down("xs")]:{
             fontSize:"3em"
@@ -106,6 +112,12 @@ const useStyles = makeStyles((theme)=>({
             height:"40em"
         },
         borderRadius:"2em"
+    },
+    tiltimage:{
+        maxWidth:"10%",
+        [theme.breakpoints.down("sm")]:{
+            display:"none",
+        }
     },
     foottop:{
         paddingLeft:"3em",
@@ -181,7 +193,7 @@ const Homepage = () =>{
             <Grid container item justify="center" alignItems="center">
             <iframe className={classes.youtube} src="https://www.youtube.com/embed/kUOMT3HYyhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Grid>
-            <Grid container item direction="row" className={Styles.containmain} justify="space-between" style={{alignSelf:"center",textAlign:"center",alignContent:"center"}}>
+            <Grid container item  className={Styles.containmain} justify="space-between" >
                 <Grid item  justify="center" alignItems="center" className={classes.foottop} style={{textAlign:"center",alignSelf:"center"}}>
                     <Typography variant="h2"  className={classes.maintext1} >
                         Get HolaPeeps Mobile App

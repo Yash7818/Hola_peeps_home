@@ -9,7 +9,7 @@ space between Get in on Google Play and Get HolaPeeps
 Footer like pdf
 Conter creator form
 phone svg height in mobile view
-Remove appbar in mobile view
+Remove appbar in mobile view and add Google play after Get Started
 make footer straight remove clip
 remove holapeeps from footer
 copyright make it lighter

@@ -11,5 +11,5 @@ Conter creator form
 phone svg height in mobile view
 Remove appbar in mobile view and add Google play after Get Started
 make footer straight remove clip
-remove holapeeps from footer
+remove holapeeps from footer in mobile view
 copyright make it lighter

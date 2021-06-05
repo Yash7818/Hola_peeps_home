@@ -61,6 +61,7 @@ const useStyles = makeStyles((theme)=>({
     },
     copy:{
         fontSize:"1.5em",
+        color: '#333',
         [theme.breakpoints.down("sm")]:{
             fontSize:"1.2em",
             padding:"1em"
@@ -94,7 +95,7 @@ const Footer = () =>{
                         </Typography>
                         <Typography variant="h5" className={Styles.footersec} style={{textAlign:"center",fontFamily:"Montserrat, sans-serif"}}>
                             Community based Voice-Only Social Network for spontaneous communication
-                        </Typography>   
+                        </Typography>
                     </Grid>
 
                 </Grid>
@@ -117,7 +118,7 @@ const Footer = () =>{
                     <TwitterIcon className={classes.social} />
                     <YouTubeIcon className={classes.social} />
                 </Grid>
-                
+
             </Grid>
             <Grid container item justify="center" className={classes.copy} style={{background:"#fae10b"}}>
                     Copyright @HolaPeeps 2021

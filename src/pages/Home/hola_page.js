@@ -29,11 +29,13 @@ const useStyles = makeStyles((theme)=>({
         background:"rgba(0,0,0,0)",
         color:"#fae10b",
         [theme.breakpoints.down("sm")]:{
-            padding:"2em 1em"
+            padding:"1em 0.2em"
         },
     },
     title:{
         flexGrow:1,
+        fontFamily:"Montserrat, sans-serif",
+        fontWeight:"600",
         [theme.breakpoints.down("sm")]:{
             fontSize:"2em"
         },
@@ -61,11 +63,11 @@ const useStyles = makeStyles((theme)=>({
         },
         [theme.breakpoints.down("sm")]:{
             fontSize:"3.5em",
-            margin:"1em 0em"
+            margin:"0.5em 0em"
         },
         [theme.breakpoints.down("xs")]:{
             fontSize:"3em",
-            margin:"1em 0em"
+            margin:"0.5em 0em"
         }
     },
     maintext1:{
@@ -145,7 +147,7 @@ const Homepage = () =>{
            <AppBar position="static" elevation="0" className={classes.appbar}>
                <Toolbar>
             <Typography variant="h3" className={classes.title}>
-                HolaPeeps       
+                Hola Peeps
             </Typography>
             <Button>
                 <img  className={classes.playbut} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621327166/Holapeeps/Artboard_1googleplay_pr8t44.png"}></img>
@@ -184,7 +186,7 @@ const Homepage = () =>{
                 </Typography>
             </Grid>
             <Grid container item justify="center" direction="column" alignItems="center">
-                <Typography variant="h4" className={classes.hometext} style={{textAlign:"center",color:"#f1f1f1",padding:"0em 0em 1em 0em",fontFamily:"Montserrat, sans-serif"}}>
+                <Typography variant="h4" className={classes.hometext} style={{textAlign:"center",color:"#ffffff",padding:"1em 0em 1em 0em",fontFamily:"Montserrat, sans-serif"}}>
                  Find Your Community and speak your Heart out. <br></br>Give it a try & have fun!
                 </Typography>
                 <Button color="primary" variant="contained" style={{color:"#000",padding:".8em",fontSize:"1.2em",fontWeight:"600",borderRadius:"1em",fontFamily:"Montserrat, sans-serif"}}>Get Started</Button>
@@ -205,7 +207,7 @@ const Homepage = () =>{
                 <Grid>
                     <img className={Styles.tiltimage} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621330176/Holapeeps/Group_26_ocdatw.png"}></img>
                 </Grid>
-                
+
             </Grid>
             <Footer></Footer>
        </Grid>

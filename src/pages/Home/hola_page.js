@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme)=>({
     },
     main:{
         alignSelf:"center",
+        paddingLeft:"5em",
         [theme.breakpoints.down("md")]:{
             display:"flex",
             flexDirection:"column"

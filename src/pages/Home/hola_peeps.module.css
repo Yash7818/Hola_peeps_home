@@ -10,6 +10,9 @@
 }
 
 .tiltimage{
+    position: relative;
+    top: 14em;
+    right: -1em;
     max-width: 35em;
 }
 .footersec{
@@ -142,13 +145,15 @@
         font-size: 2.5em;
     }
 }
-@media (max-width:545px){
+@media (max-width:960px){
     .socialLink{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
-  
+    .tiltimage{
+        display: none;
+    }
 }
 @media (max-width:400px){
     .tiltimage{

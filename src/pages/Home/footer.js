@@ -13,12 +13,19 @@ import Styles from './hola_peeps.module.css';
 
 const useStyles = makeStyles((theme)=>({
     root:{
+        display:"flex",
         background:"#fae10b",
-        padding:"15em 5em 3em 0em",
+        padding:"10em 5em 3em 0em",
         clipPath:"polygon(0 0, 100% 30%, 100% 100%, 0% 100%)",
         [theme.breakpoints.down("sm")]:{
-            padding:"15em 0em 3em 0em",
+            padding:"8em 0em 3em 0em",
             clipPath:"polygon(0 0, 100% 10%, 100% 100%, 0% 100%)",
+            flexDirection:"column"
+        },
+        [theme.breakpoints.down("sm")]:{
+            padding:"6em 0em 1em 0em",
+            clipPath:"polygon(0 0, 100% 5%, 100% 100%, 0% 100%)",
+            flexDirection:"column"
         }
     },
     input:{
@@ -40,16 +47,29 @@ const useStyles = makeStyles((theme)=>({
               borderRadius: `2em`,
             },
           },
-          width:"60%",
+          width:"70%",
           padding:"2em 0em",
-          [theme.breakpoints.down("sm")]:{
+        [theme.breakpoints.down("sm")]:{
               width:"80%"
-          }
+        },
+        [theme.breakpoints.down("xs")]:{
+            width:"90%"
+        }
+    },
+    fieldarea:{
+        textAlign:"center",
+        width:"50%",
+        [theme.breakpoints.down("sm")]:{
+            width:"100%"
+        }
     },
     sendbut:{
         color:"#fae10b",
         height:"100%",
         borderRadius:"2em"
+    },
+    footersec:{
+        
     },
     social:{
         fontSize:"2em",
@@ -60,11 +80,24 @@ const useStyles = makeStyles((theme)=>({
 
     },
     copy:{
-        fontSize:"1.5em",
-        color: '#333',
+        fontSize:"1.2em",
+        padding:"1em",
+        color: "rgba(0,0,0,0.5)",
         [theme.breakpoints.down("sm")]:{
             fontSize:"1.2em",
             padding:"1em"
+        }
+    },
+    footertext:{
+        padding:"0.7em 0em",
+        paddingLeft:"2em",
+        [theme.breakpoints.down("sm")]:{
+            fontSize:"1.2em",
+            padding:"1em"
+        },
+        [theme.breakpoints.down("xs")]:{
+            fontSize:"1.1em",
+            paddingLeft:".5em"
         }
     }
 }))
@@ -73,8 +106,8 @@ const Footer = () =>{
     const classes = useStyles();
     return (
         <>
-            <Grid className={classes.root} container item justify="space-around">
-                <Grid style={{textAlign:"center"}}>
+            <Grid className={classes.root}>
+                <Grid className={classes.fieldarea}>
                     <Typography style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600",fontSize:"2.5em"}}>
                         Have a question?
                     </Typography>
@@ -89,29 +122,31 @@ const Footer = () =>{
                     }}
                     >
                     </TextField>
-                    <Grid container item justify="center" alignItems="center" direction="column" style={{padding:"2em 0em 0em 0em"}}>
+                    <Grid style={{padding:"2em 0em 0em 0em"}}>
                         <Typography variant="h4">
                             HolaPeeps
                         </Typography>
-                        <Typography variant="h5" className={Styles.footersec} style={{textAlign:"center",fontFamily:"Montserrat, sans-serif"}}>
+                        <Typography variant="h5" className={classes.footersec} style={{fontFamily:"Montserrat, sans-serif"}}>
                             Community based Voice-Only Social Network for spontaneous communication
                         </Typography>
                     </Grid>
 
                 </Grid>
-                <Grid item style={{display:"flex",justifyContent:"space-evenly",paddingTop:"4em"}}>
+
+                <Grid style={{display:"flex",justifyContent:"space-around",paddingTop:"5em"}}>
                     <Grid>
-                        <Typography variant="h6"  className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>About</Typography>
-                        <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Press Kit</Typography>
-                        <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Privacy Policy</Typography>
+                        <Typography variant="h6"  className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>About</Typography>
+                        <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Press Kit</Typography>
+                        <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Privacy Policy</Typography>
                     </Grid>
-                    {/* <Grid>
-                        <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Blog</Typography>
-                        <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>FAQs</Typography>
-                        <Typography variant="h6" className={classes.footertext} style={{padding:"0.5em 0em",paddingLeft:"1em",fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Feature Request</Typography>
-                    </Grid> */}
+                    <Grid>
+                        <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Blog</Typography>
+                        <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>FAQs</Typography>
+                        <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Feature Request</Typography>
+                    </Grid>
                 </Grid>
-                <Grid className={Styles.socialLink} style={{padding:"4em 0em 0em 0em"}}>
+                <Grid style={{flex:"1 1 auto"}}></Grid>
+                <Grid className={Styles.socialLink} style={{padding:"4em 2em 0em 2em"}}>
                     <FacebookIcon className={classes.social} />
                     <InstagramIcon className={classes.social} />
                     <LinkedInIcon className={classes.social} />

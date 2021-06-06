@@ -5,11 +5,11 @@ white lines due carousel
 order carousel according to play store
 video width smaller and height bigger
 align Get Hola Peeps Mobile App to the right
-space between Get in on Google Play and Get HolaPeeps
-Footer like pdf
+space between Get in on Google Play and Get HolaPeeps 
+Footer like pdf *
 Conter creator form
 phone svg height in mobile view
-Remove appbar in mobile view and add Google play after Get Started
-make footer straight remove clip
-remove holapeeps from footer in mobile view
-copyright make it lighter
+Remove appbar in mobile view and add Google play after Get Started *
+ make footer straight remove clip 
+remove holapeeps from footer in mobile view 
+copyright make it lighter *

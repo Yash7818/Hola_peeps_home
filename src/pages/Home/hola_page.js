@@ -29,8 +29,11 @@ const useStyles = makeStyles((theme)=>({
         background:"rgba(0,0,0,0)",
         color:"#fae10b",
         [theme.breakpoints.down("sm")]:{
-            padding:"1em 0.2em"
+            padding:"1em 0.2em",
         },
+        [theme.breakpoints.down("xs")]:{
+            display:"none"
+        }
     },
     title:{
         flexGrow:1,
@@ -48,7 +51,8 @@ const useStyles = makeStyles((theme)=>({
         paddingLeft:"5em",
         [theme.breakpoints.down("md")]:{
             display:"flex",
-            flexDirection:"column"
+            flexDirection:"column",
+            paddingLeft:"0em",
         }
 
         // padding:"0em 4em"
@@ -100,13 +104,22 @@ const useStyles = makeStyles((theme)=>({
             maxWidth:"10em"
         }
     },
+    exceptbut:{
+        display:"none",
+        marginTop:"1em",
+        maxWidth:"13em",
+        [theme.breakpoints.down("xs")]:{
+            display:"inline"
+        }
+    },
     youtube:{
-        width:"80%",
+        width:"40%",
         [theme.breakpoints.down("sm")]:{
             height:"20em"
         },
         [theme.breakpoints.down("md")]:{
-            height:"30em"
+            height:"30em",
+            width:"85%",
         },
         [theme.breakpoints.down("lg")]:{
             height:"35em"
@@ -118,12 +131,13 @@ const useStyles = makeStyles((theme)=>({
     },
     tiltimage:{
         maxWidth:"10%",
-        [theme.breakpoints.down("sm")]:{
+        [theme.breakpoints.down("md")]:{
             display:"none",
         }
     },
     foottop:{
-        paddingLeft:"3em",
+        paddingLeft:"4em",
+        paddingTop:"3em",
         [theme.breakpoints.down("sm")]:{
             paddingLeft:"0em",
             paddingTop:"1em"
@@ -191,6 +205,9 @@ const Homepage = () =>{
                  Find Your Community and speak your Heart out. <br></br>Give it a try & have fun!
                 </Typography>
                 <Button color="primary" variant="contained" style={{color:"#000",padding:".8em",fontSize:"1.2em",fontWeight:"600",borderRadius:"1em",fontFamily:"Montserrat, sans-serif"}}>Get Started</Button>
+                <Button>
+                    <img  className={classes.exceptbut} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621327166/Holapeeps/Artboard_1googleplay_pr8t44.png"}></img>
+                </Button>
             </Grid>
             <Poster />
             <Grid container item justify="center" alignItems="center">

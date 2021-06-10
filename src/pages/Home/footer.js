@@ -69,7 +69,10 @@ const useStyles = makeStyles((theme)=>({
         borderRadius:"2em"
     },
     footersec:{
-        
+      [theme.breakpoints.down("sm")]:{
+          fontSize:"1.2em",
+          fontWeight: "500"
+      },
     },
     social:{
         fontSize:"2em",
@@ -99,6 +102,12 @@ const useStyles = makeStyles((theme)=>({
             fontSize:"1.1em",
             paddingLeft:".5em"
         }
+    },
+    footerQues:{
+        fontSize:"2.5em",
+        [theme.breakpoints.down("sm")]:{
+            fontSize:"2em"
+        }
     }
 }))
 
@@ -108,7 +117,7 @@ const Footer = () =>{
         <>
             <Grid className={classes.root}>
                 <Grid className={classes.fieldarea}>
-                    <Typography style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600",fontSize:"2.5em"}}>
+                    <Typography className={classes.footerQues} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>
                         Have a question?
                     </Typography>
                     <TextField
@@ -116,15 +125,15 @@ const Footer = () =>{
                     placeholder="holapeeps7@gmail.com"
                     className={classes.input}
                     InputProps={{
-                        endAdornment:<Button variant="contained" color="secondary" className={classes.sendbut}>
+                        endAdornment:<a href="mailto:holapeeps7@gmail.com"><Button variant="contained" color="secondary" className={classes.sendbut}>
                             Send
-                        </Button>
+                        </Button></a>
                     }}
                     >
                     </TextField>
-                    <Grid style={{padding:"2em 0em 0em 0em"}}>
-                        <Typography variant="h4">
-                            HolaPeeps
+                    <Grid style={{padding:"2em 1em 0em 1em"}}>
+                        <Typography variant="h4" style={{fontFamily:"Roboto, sans-serif",fontWeight:"500"}}>
+                            Hola Peeps
                         </Typography>
                         <Typography variant="h5" className={classes.footersec} style={{fontFamily:"Montserrat, sans-serif"}}>
                             Community based Voice-Only Social Network for spontaneous communication
@@ -147,16 +156,26 @@ const Footer = () =>{
                 </Grid>
                 <Grid style={{flex:"1 1 auto"}}></Grid>
                 <Grid className={Styles.socialLink} style={{padding:"4em 2em 0em 2em"}}>
-                    <FacebookIcon className={classes.social} />
-                    <InstagramIcon className={classes.social} />
-                    <LinkedInIcon className={classes.social} />
-                    <TwitterIcon className={classes.social} />
-                    <YouTubeIcon className={classes.social} />
+                    <a href="https://www.facebook.com/Hola-Peeps-110276957770109" target="_blank">
+                      <FacebookIcon className={classes.social} style={{color: "#000"}} />
+                    </a>
+                    <a href="https://twitter.com/holapeepsapp" target="_blank">
+                      <TwitterIcon className={classes.social} style={{color: "#000"}} />
+                    </a>
+                    <a href="https://www.instagram.com/holapeepsapp/" target="_blank">
+                      <InstagramIcon className={classes.social} style={{color: "#000"}} />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCb24mRForysbQyfd2C3XYJA" target="_blank">
+                      <YouTubeIcon className={classes.social} style={{color: "#000"}} />
+                    </a>
+                    <a href="https://www.linkedin.com/company/hola-peeps" target="_blank">
+                      <LinkedInIcon className={classes.social} style={{color: "#000"}} />
+                    </a>
                 </Grid>
 
             </Grid>
             <Grid container item justify="center" className={classes.copy} style={{background:"#fae10b"}}>
-                    Copyright @HolaPeeps 2021
+                    Copyright @ Hola Peeps 2021
             </Grid>
         </>
     );

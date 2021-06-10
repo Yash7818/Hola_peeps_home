@@ -11,7 +11,7 @@
 
 .tiltimage{
     position: relative;
-    top: 14em;
+    top: 14.3em;
     right: -1em;
     max-width: 35em;
 }
@@ -83,7 +83,7 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
-    
+
 }
 
 @media (max-width:1400px) {
@@ -101,7 +101,7 @@
     .tiltimage{
         max-width: 25em;
     }
-   
+
 }
 @media (max-width:1230px){
     .containmain{

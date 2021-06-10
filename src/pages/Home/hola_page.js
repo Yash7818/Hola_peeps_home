@@ -48,14 +48,25 @@ const useStyles = makeStyles((theme)=>({
     },
     main:{
         alignSelf:"center",
-        paddingLeft:"5em",
+        // paddingLeft:"5em",
         [theme.breakpoints.down("md")]:{
             display:"flex",
             flexDirection:"column",
             paddingLeft:"0em",
-        }
+        },
+        [theme.breakpoints.down("sm")]:{
+            marginTop: '10px'
+        },
 
         // padding:"0em 4em"
+    },
+    subHeading: {
+      paddingRight:"5em",
+      [theme.breakpoints.down("md")]:{
+          display:"flex",
+          flexDirection:"column",
+          paddingRight:"0em",
+      }
     },
     maintext:{
         color:"#fae10b",
@@ -67,12 +78,12 @@ const useStyles = makeStyles((theme)=>({
             margin:"1em 0em"
         },
         [theme.breakpoints.down("sm")]:{
-            fontSize:"3.5em",
-            margin:"0.5em 0em"
+            fontSize:"2.4em",
+            margin:"0.2em 0em"
         },
         [theme.breakpoints.down("xs")]:{
-            fontSize:"3em",
-            margin:"0.5em 0em"
+            fontSize:"2.4em",
+            margin:"0.2em 0em"
         }
     },
     maintext1:{
@@ -80,28 +91,31 @@ const useStyles = makeStyles((theme)=>({
         fontWeight:"600",
         textAlign:"center",
         fontFamily:"Montserrat, sans-serif",
+        marginBottom: "15px",
         [theme.breakpoints.down("lg")]:{
-            fontSize:"4em",
+            fontSize:"3.5em",
             margin:"1em 0em"
         },
         [theme.breakpoints.down("sm")]:{
-            fontSize:"3.5em",
+            fontSize:"2.8em",
             margin:"1em 0em"
 
         },
         [theme.breakpoints.down("xs")]:{
-            fontSize:"3em"
+            fontSize:"2.8em"
         }
     },
     hometext:{
+        padding:"1em 46px 1em 0em",
         [theme.breakpoints.down("sm")]:{
-            fontSize:"1.5em"
+            fontSize:"1.5em",
+            padding:"1em 0em 1em 0em",
         }
     },
     playbut:{
         maxWidth:"15em",
         [theme.breakpoints.down("sm")]:{
-            maxWidth:"10em"
+            maxWidth:"12em"
         }
     },
     exceptbut:{
@@ -113,19 +127,20 @@ const useStyles = makeStyles((theme)=>({
         }
     },
     youtube:{
-        width:"40%",
-        [theme.breakpoints.down("sm")]:{
-            height:"20em"
-        },
-        [theme.breakpoints.down("md")]:{
-            height:"30em",
-            width:"85%",
+        width:"80%",
+        [theme.breakpoints.down("xl")]:{
+            height:"60em"
         },
         [theme.breakpoints.down("lg")]:{
-            height:"35em"
+            height:"45em"
         },
-        [theme.breakpoints.down("xl")]:{
-            height:"40em"
+        [theme.breakpoints.down("md")]:{
+            height:"40em",
+            width:"85%",
+        },
+        [theme.breakpoints.down("sm")]:{
+            height:"38em",
+            width:"90%",
         },
         borderRadius:"2em"
     },
@@ -143,6 +158,10 @@ const useStyles = makeStyles((theme)=>({
             paddingTop:"1em"
         }
     },
+    toolbar: {
+      display: "flex",
+      padding: "15px 15px 0"
+    }
 }));
 
 
@@ -159,15 +178,17 @@ const Homepage = () =>{
     return (
     <ThemeProvider theme={theme}>
        <Grid className={classes.root}>
-           <AppBar position="static" elevation="0" className={classes.appbar}>
-               <Toolbar>
-            <Typography variant="h3" className={classes.title}>
-                Hola Peeps
-            </Typography>
-            <Button>
-                <img  className={classes.playbut} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621327166/Holapeeps/Artboard_1googleplay_pr8t44.png"}></img>
-            </Button>
-            </Toolbar>
+          <AppBar position="static" elevation="0" className={classes.appbar}>
+            <div className={classes.toolbar}>
+              <Typography variant="h3" className={classes.title}>
+                  Hola Peeps
+              </Typography>
+              <div>
+                <a href="https://play.google.com/store/apps/details?id=com.holapeeps.app" target="_blank">
+                  <img  className={classes.playbut} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621327166/Holapeeps/Artboard_1googleplay_pr8t44.png"}></img>
+                </a>
+              </div>
+            </div>
            </AppBar>
 
             <Grid container item justify="center" alignItems="center" className={classes.main} style={{alignSelf:"center",textAlign:"center",alignContent:"center"}}>
@@ -200,13 +221,21 @@ const Homepage = () =>{
                     more Often
                 </Typography>
             </Grid>
-            <Grid container item justify="center" direction="column" alignItems="center">
-                <Typography variant="h4" className={classes.hometext} style={{textAlign:"center",color:"#ffffff",padding:"1em 0em 1em 0em",fontFamily:"Montserrat, sans-serif"}}>
+            <Grid className={classes.subHeading} container item justify="center" direction="column" alignItems="center">
+                <Typography variant="h4" className={classes.hometext} style={{textAlign:"center",color:"#ffffff",fontFamily:"Montserrat, sans-serif"}}>
                  Find Your Community and speak your Heart out. <br></br>Give it a try & have fun!
                 </Typography>
-                <Button color="primary" variant="contained" style={{color:"#000",padding:".8em",fontSize:"1.2em",fontWeight:"600",borderRadius:"1em",fontFamily:"Montserrat, sans-serif"}}>Get Started</Button>
+                <div>
+                  <a href="https://holapeeps.com/" target="_blank">
+                    <Button color="primary" variant="contained" style={{color:"#000",padding:".8em",fontSize:"1.2em",fontWeight:"600",borderRadius:"1em",fontFamily:"Montserrat, sans-serif"}}>
+                      Get Started
+                    </Button>
+                  </a>
+                </div>
                 <Button>
+                  <a href="https://play.google.com/store/apps/details?id=com.holapeeps.app" target="_blank">
                     <img  className={classes.exceptbut} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621327166/Holapeeps/Artboard_1googleplay_pr8t44.png"}></img>
+                  </a>
                 </Button>
             </Grid>
             <Poster />
@@ -219,7 +248,9 @@ const Homepage = () =>{
                         Get HolaPeeps Mobile App
                     </Typography>
                     <Button>
+                      <a href="https://play.google.com/store/apps/details?id=com.holapeeps.app" target="_blank">
                         <img className={classes.playbut} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621327166/Holapeeps/Artboard_1googleplay_pr8t44.png"}></img>
+                      </a>
                     </Button>
                 </Grid>
                 <Grid>

@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme)=>({
     },
     simage:{
         display:"none",
-        maxWidth:"80%",
+        maxWidth:"90%",
         borderRadius:"1em",
         [theme.breakpoints.down("xs")]:{
             display:"inline",
@@ -67,29 +67,29 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 const Poster = () =>{
-    const First = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280385/Holapeeps/Artboard_1_copy_4add_pxyso7.png";
-    const Second = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280388/Holapeeps/Artboard_1_copy_2add_gqi6s0.png";
-    const Third = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280386/Holapeeps/Artboard_1_copy_3add_hek2by.png";
-    const Fourth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280388/Holapeeps/Artboard_1_copyadd_vtib6q.png";
-    const Fifth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280386/Holapeeps/Artboard_1_copy_5add_lzodgu.png";
-    
-    const Mfirst = "https://res.cloudinary.com/marcos-yash/image/upload/v1621839541/Mobile/Artboard_1hp5_1_yx1n9f.jpg";
-    const Msecond = "https://res.cloudinary.com/marcos-yash/image/upload/v1621842553/Mobile/Artboard_1hp_1_ipifza.jpg";
-    const Mthird = "https://res.cloudinary.com/marcos-yash/image/upload/v1621840384/Mobile/Artboard_1hp3_uoaslc.jpg";
-    const Mfourth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621839677/Mobile/Artboard_1hp2_ues1fj.jpg";
-    const Mfifth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621931989/Mobile/Artboard_1hp6_1_lzkuty.jpg";
+    const First = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280388/Holapeeps/Artboard_1_copyadd_vtib6q.png";
+    const Second = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280386/Holapeeps/Artboard_1_copy_5add_lzodgu.png";
+    const Third = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280388/Holapeeps/Artboard_1_copy_2add_gqi6s0.png";
+    const Fourth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280386/Holapeeps/Artboard_1_copy_3add_hek2by.png";
+    const Fifth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280385/Holapeeps/Artboard_1_copy_4add_pxyso7.png";
+
+    const Mfirst = "https://res.cloudinary.com/marcos-yash/image/upload/v1621842553/Mobile/Artboard_1hp_1_ipifza.jpg";
+    const Msecond = "https://res.cloudinary.com/marcos-yash/image/upload/v1621931989/Mobile/Artboard_1hp6_1_lzkuty.jpg";
+    const Mthird = "https://res.cloudinary.com/marcos-yash/image/upload/v1621839677/Mobile/Artboard_1hp2_ues1fj.jpg";
+    const Mfourth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621839541/Mobile/Artboard_1hp5_1_yx1n9f.jpg";
+    const Mfifth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621840384/Mobile/Artboard_1hp3_uoaslc.jpg";
 
     const classes = useStyles();
 
     return (
         <>
-            <Carousel className={classes.root} vertical="true" 
+            <Carousel className={classes.root} vertical="true"
                 renderCenterLeftControls={({currentSlide,slideCount,goToSlide}) => (
                     <ul style={{padding:"1em 3em"}}>
                         {[...Array(slideCount)].map((key,index)=><li className={index==currentSlide?classes.active:classes.simple} onClick={()=>goToSlide(index)}><div></div></li>)}
                     </ul>
                 )}
-                
+
             >
                 <Grid container item justify="center" alignItems="center" style={{padding:"1em 0em"}}>
                     <img className={classes.image} src={First}></img>
@@ -101,7 +101,7 @@ const Poster = () =>{
                 </Grid>
                 <Grid container item justify="center" alignItems="center" style={{padding:"1em 0em"}}>
                     <img className={classes.image} src={Third}></img>
-                    <img className={classes.simage} src={Mthird}></img> 
+                    <img className={classes.simage} src={Mthird}></img>
                 </Grid>
                 <Grid container item justify="center" alignItems="center" style={{padding:"1em 0em"}}>
                     <img className={classes.image} src={Fourth}></img>

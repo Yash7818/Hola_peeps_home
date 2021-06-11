@@ -92,17 +92,20 @@ const useStyles = makeStyles((theme)=>({
         textAlign:"center",
         fontFamily:"Montserrat, sans-serif",
         marginBottom: "15px",
+        paddingLeft: "10%",
+        paddingRight: "10%",
         [theme.breakpoints.down("lg")]:{
             fontSize:"3.5em",
             margin:"1em 0em"
         },
         [theme.breakpoints.down("sm")]:{
             fontSize:"2.8em",
-            margin:"1em 0em"
-
+            margin:"1em 0em",
+            paddingLeft: "0"
         },
         [theme.breakpoints.down("xs")]:{
-            fontSize:"2.8em"
+            fontSize:"2.8em",
+            paddingLeft: "0"
         }
     },
     hometext:{
@@ -151,7 +154,7 @@ const useStyles = makeStyles((theme)=>({
         }
     },
     foottop:{
-        paddingLeft:"4em",
+        // paddingLeft:"4em",
         paddingTop:"3em",
         [theme.breakpoints.down("sm")]:{
             paddingLeft:"0em",

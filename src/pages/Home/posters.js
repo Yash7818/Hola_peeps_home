@@ -67,17 +67,17 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 const Poster = () =>{
-    const First = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280388/Holapeeps/Artboard_1_copyadd_vtib6q.png";
-    const Second = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280386/Holapeeps/Artboard_1_copy_5add_lzodgu.png";
-    const Third = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280388/Holapeeps/Artboard_1_copy_2add_gqi6s0.png";
-    const Fourth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280386/Holapeeps/Artboard_1_copy_3add_hek2by.png";
-    const Fifth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621280385/Holapeeps/Artboard_1_copy_4add_pxyso7.png";
+    const First = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic1.webp";
+    const Second = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic2.webp";
+    const Third = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic3.webp";
+    const Fourth = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic4.webp";
+    const Fifth = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic5.webp";
 
-    const Mfirst = "https://res.cloudinary.com/marcos-yash/image/upload/v1621842553/Mobile/Artboard_1hp_1_ipifza.jpg";
-    const Msecond = "https://res.cloudinary.com/marcos-yash/image/upload/v1621931989/Mobile/Artboard_1hp6_1_lzkuty.jpg";
-    const Mthird = "https://res.cloudinary.com/marcos-yash/image/upload/v1621839677/Mobile/Artboard_1hp2_ues1fj.jpg";
-    const Mfourth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621839541/Mobile/Artboard_1hp5_1_yx1n9f.jpg";
-    const Mfifth = "https://res.cloudinary.com/marcos-yash/image/upload/v1621840384/Mobile/Artboard_1hp3_uoaslc.jpg";
+    const Mfirst = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m1.webp";
+    const Msecond = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m2.webp";
+    const Mthird = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m3.webp";
+    const Mfourth = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m4.webp";
+    const Mfifth = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m5.webp";
 
     const classes = useStyles();
 

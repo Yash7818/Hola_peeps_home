@@ -1,15 +1,18 @@
-Find your community: and in the middle
-Get Started to the left, align it with phone
-Hola Peeps top left spacing and font
-white lines due carousel
-order carousel according to play store
-video width smaller and height bigger
-align Get Hola Peeps Mobile App to the right
-space between Get in on Google Play and Get HolaPeeps 
-Footer like pdf *
-Conter creator form
-phone svg height in mobile view
-Remove appbar in mobile view and add Google play after Get Started *
- make footer straight remove clip 
-remove holapeeps from footer in mobile view 
-copyright make it lighter *
+Desktop view:
+Top bar: Make Hola Peeps and Google Play size smaller
+Remove underline of Get Started
+Carousel transition bug
+Get HolaPeeps -> Hola Peeps
+Get Started -> remove target=blank
+Email input -> no typing, email in input
+Make Footer Hola Peeps non italic
+Add font weight to sub-heading in footer
+Footer social media links -> vertical
+Line appears above Copyright
+
+Mobile view:
+Put the Get Stared and Google Play buttons above sub-heading for this view only
+Carousel change
+Carousel scroll not happening
+
+Icon order: Insta FB Twitter LinkedIn YT

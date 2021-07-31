@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles,createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Toolbar from '@material-ui/core/Toolbar';
 import Poster from './posters';
 import Footer from './footer';
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme)=>({
         flexGrow:1,
     },
     appbar:{
-        padding:"2em",
+        padding:"1em",
         background:"rgba(0,0,0,0)",
         color:"#fae10b",
         [theme.breakpoints.down("sm")]:{
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme)=>({
         flexGrow:1,
         fontFamily:"Montserrat, sans-serif",
         fontWeight:"600",
+        fontSize: "2.5rem",
         [theme.breakpoints.down("sm")]:{
             fontSize:"2em"
         },
@@ -73,9 +75,14 @@ const useStyles = makeStyles((theme)=>({
         fontWeight:"600",
         textAlign:"center",
         fontFamily:"Montserrat, sans-serif",
+        fontSize:"4.5em",
         [theme.breakpoints.down("lg")]:{
-            fontSize:"5em",
-            margin:"1em 0em"
+            fontSize:"4.5em",
+            margin:"0.2em 0em"
+        },
+        [theme.breakpoints.down("md")]:{
+            fontSize:"3.5em",
+            margin:"0.2em 0em"
         },
         [theme.breakpoints.down("sm")]:{
             fontSize:"2.4em",
@@ -109,14 +116,14 @@ const useStyles = makeStyles((theme)=>({
         }
     },
     hometext:{
-        padding:"1em 46px 1em 0em",
+        padding:"0.5em 46px 0.5em 0em",
         [theme.breakpoints.down("sm")]:{
             fontSize:"1.5em",
-            padding:"1em 0em 1em 0em",
+            padding:"0.5em 0em 0.5em 0em",
         }
     },
     playbut:{
-        maxWidth:"15em",
+        maxWidth:"14em",
         [theme.breakpoints.down("sm")]:{
             maxWidth:"12em"
         }
@@ -128,6 +135,19 @@ const useStyles = makeStyles((theme)=>({
         [theme.breakpoints.down("xs")]:{
             display:"inline"
         }
+    },
+    getStarted: {
+      padding:".8em",
+      marginTop: "1.5em",
+      fontSize:"1.3em",
+      fontWeight:"600",
+      borderRadius:"1em",
+      [theme.breakpoints.down("md")]:{
+        marginTop: "1em",
+      },
+      [theme.breakpoints.down("sm")]:{
+        marginTop: "0.5em",
+      }
     },
     youtube:{
         width:"80%",
@@ -163,11 +183,9 @@ const useStyles = makeStyles((theme)=>({
     },
     toolbar: {
       display: "flex",
-      padding: "15px 15px 0"
+      padding: "0px 20px 0"
     }
 }));
-
-
 
 
 const Homepage = () =>{
@@ -176,7 +194,11 @@ const Homepage = () =>{
 
     useEffect(()=>{
         document.body.style.background="#2b2b2b";
-    })
+    });
+
+    const matches = useMediaQuery(theme.breakpoints.down('md'));
+    const phoneWidth = matches ? '240' : '280';
+    const phoneHeight = matches ? '420' : '500';
 
     return (
     <ThemeProvider theme={theme}>
@@ -199,7 +221,7 @@ const Homepage = () =>{
                     Hang out
                 </Typography>
                 <Grid style={{textAlign:"center",alignContent:"center"}}>
-                 <svg  width="300" height="540" viewBox="0 0 309 622" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <svg id="phoneSvg" width={phoneWidth} height={phoneHeight} viewBox="0 0 309 622" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="Group 155">
                 <path id="Vector" d="M303.66 98.4301H303.08V37.0001C303.08 27.2189 299.194 17.8384 292.278 10.922C285.362 4.00569 275.981 0.120117 266.2 0.120117H42.65C32.8688 0.120117 23.4882 4.00569 16.5719 10.922C9.65556 17.8384 5.77002 27.2189 5.77002 37.0001V98.4301H5.17999C3.90338 98.4328 2.67996 98.9418 1.7782 99.8454C0.876435 100.749 0.369992 101.974 0.369995 103.25V145.74C0.369995 147.016 0.876759 148.239 1.77881 149.141C2.68086 150.043 3.9043 150.55 5.17999 150.55H5.77002V160.69H5.17999C3.90511 160.693 2.68322 161.2 1.78174 162.102C0.88026 163.003 0.372637 164.225 0.369995 165.5V208C0.369995 209.276 0.876759 210.499 1.77881 211.401C2.68086 212.303 3.9043 212.81 5.17999 212.81H5.77002V585C5.77002 594.781 9.65556 604.162 16.5719 611.078C23.4882 617.995 32.8688 621.88 42.65 621.88H266.2C275.981 621.88 285.362 617.995 292.278 611.078C299.194 604.162 303.08 594.781 303.08 585V176.62H303.66C304.938 176.62 306.164 176.112 307.068 175.208C307.972 174.304 308.48 173.078 308.48 171.8V103.25C308.48 101.972 307.972 100.746 307.068 99.8419C306.164 98.9379 304.938 98.4301 303.66 98.4301Z" fill="#F1D806"/>
                 <path id="Vector_2" d="M262.39 9.24023H46.45C29.9091 9.24023 16.5 22.6493 16.5 39.1902V582.77C16.5 599.311 29.9091 612.72 46.45 612.72H262.39C278.931 612.72 292.34 599.311 292.34 582.77V39.1902C292.34 22.6493 278.931 9.24023 262.39 9.24023Z" fill="#202020"/>
@@ -225,12 +247,9 @@ const Homepage = () =>{
                 </Typography>
             </Grid>
             <Grid className={classes.subHeading} container item justify="center" direction="column" alignItems="center">
-                <Typography variant="h4" className={classes.hometext} style={{textAlign:"center",color:"#ffffff",fontFamily:"Montserrat, sans-serif"}}>
-                 Find Your Community and speak your Heart out. <br></br>Give it a try & have fun!
-                </Typography>
                 <div>
                   <a href="https://holapeeps.com/" target="_blank">
-                    <Button color="primary" variant="contained" style={{color:"#000",padding:".8em",fontSize:"1.2em",fontWeight:"600",borderRadius:"1em",fontFamily:"Montserrat, sans-serif"}}>
+                    <Button className={classes.getStarted} color="primary" variant="contained" style={{color:"#000",fontFamily:"Montserrat, sans-serif"}}>
                       Get Started
                     </Button>
                   </a>
@@ -240,6 +259,9 @@ const Homepage = () =>{
                     <img  className={classes.exceptbut} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621327166/Holapeeps/Artboard_1googleplay_pr8t44.png"}></img>
                   </a>
                 </Button>
+                <Typography variant="h4" className={classes.hometext} style={{textAlign:"center",color:"#ffffff",fontFamily:"Montserrat, sans-serif"}}>
+                 Find Your Community and speak your Heart out. <br></br>Give it a try & have fun!
+                </Typography>
             </Grid>
             <Poster />
             <Grid container item justify="center" alignItems="center">

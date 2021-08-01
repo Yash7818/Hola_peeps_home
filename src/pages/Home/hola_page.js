@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { makeStyles,createMuiTheme,ThemeProvider } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import Toolbar from '@material-ui/core/Toolbar';
 import Poster from './posters';
 import Footer from './footer';
 import Styles from './hola_peeps.module.css';
@@ -116,10 +115,10 @@ const useStyles = makeStyles((theme)=>({
         }
     },
     hometext:{
-        padding:"0.5em 46px 0.5em 0em",
+        padding:"0.4em 46px 0.4em 0em",
         [theme.breakpoints.down("sm")]:{
             fontSize:"1.5em",
-            padding:"0.5em 0em 0.5em 0em",
+            padding:"0.4em 0em 0.4em 0em",
         }
     },
     playbut:{
@@ -138,10 +137,11 @@ const useStyles = makeStyles((theme)=>({
     },
     getStarted: {
       padding:".8em",
-      marginTop: "1.5em",
+      marginTop: "1.2em",
       fontSize:"1.3em",
       fontWeight:"600",
       borderRadius:"1em",
+      textDecoration: "none",
       [theme.breakpoints.down("md")]:{
         marginTop: "1em",
       },
@@ -198,7 +198,7 @@ const Homepage = () =>{
 
     const matches = useMediaQuery(theme.breakpoints.down('md'));
     const phoneWidth = matches ? '240' : '280';
-    const phoneHeight = matches ? '420' : '500';
+    const phoneHeight = matches ? '420' : '490';
 
     return (
     <ThemeProvider theme={theme}>
@@ -248,7 +248,7 @@ const Homepage = () =>{
             </Grid>
             <Grid className={classes.subHeading} container item justify="center" direction="column" alignItems="center">
                 <div>
-                  <a href="https://holapeeps.com/" target="_blank">
+                  <a href="https://holapeeps.com/" target="_blank" style={{textDecoration: "none"}}>
                     <Button className={classes.getStarted} color="primary" variant="contained" style={{color:"#000",fontFamily:"Montserrat, sans-serif"}}>
                       Get Started
                     </Button>
@@ -273,7 +273,7 @@ const Homepage = () =>{
             <Grid container item  className={Styles.containmain} justify="space-between" >
                 <Grid item  justify="center" alignItems="center" className={classes.foottop} style={{textAlign:"center",alignSelf:"center"}}>
                     <Typography variant="h2"  className={classes.maintext1} >
-                        Get HolaPeeps Mobile App
+                        Get Hola Peeps Mobile App
                     </Typography>
                     <Button>
                       <a href="https://play.google.com/store/apps/details?id=com.holapeeps.app" target="_blank">
@@ -281,7 +281,7 @@ const Homepage = () =>{
                       </a>
                     </Button>
                 </Grid>
-                
+
                 <Grid>
                     <img className={Styles.tiltimage} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621330176/Holapeeps/Group_26_ocdatw.png"}></img>
                 </Grid>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Grid from '@material-ui/core/Grid';
 // import Carousel from 'nuka-carousel';
 import {makeStyles} from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -82,17 +81,6 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 const Poster = (props) =>{
-    const First = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic1.webp";
-    const Second = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic2.webp";
-    const Third = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic3.webp";
-    const Fourth = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic4.webp";
-    const Fifth = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic5.webp";
-
-    const Mfirst = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m1.webp";
-    const Msecond = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m2.webp";
-    const Mthird = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m3.webp";
-    const Mfourth = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m4.webp";
-    const Mfifth = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m5.webp";
 
     const classes = useStyles();
 
@@ -134,7 +122,7 @@ const Poster = (props) =>{
             </Carousel>*/}
             <Carousel className={classes.newRoot}
               stopOnHover={false} autoPlay={true} infiniteLoop={true}
-              transitionTime={1000} interval={3000}
+              transitionTime={1000} interval={5000}
               showThumbs={false} showStatus={false}
               >
                 <div className={classes.caroImg}>
@@ -167,7 +155,7 @@ const Poster = (props) =>{
                 <div className={classes.caroImg}>
                     {
                       matches ? (
-                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic1.webp" />
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic4.webp" />
                       ) : (
                         <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m4.webp" />
                       )
@@ -176,7 +164,7 @@ const Poster = (props) =>{
                 <div className={classes.caroImg}>
                     {
                       matches ? (
-                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic1.webp" />
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic5.webp" />
                       ) : (
                         <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m5.webp" />
                       )

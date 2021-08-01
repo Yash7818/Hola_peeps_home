@@ -76,14 +76,14 @@
 }
 
 
-@media (max-width:1456px) and (min-width:1425px) {
+/* @media (max-width:1456px) and (min-width:1425px) {
     .socialLink{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-}
+} */
 
 @media (max-width:1400px) {
     .containmain{

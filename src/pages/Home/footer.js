@@ -10,6 +10,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import Styles from './hola_peeps.module.css';
+import clsx from  'clsx';
 
 const useStyles = makeStyles((theme)=>({
     root:{
@@ -66,7 +67,8 @@ const useStyles = makeStyles((theme)=>({
     sendbut:{
         color:"#fae10b",
         height:"100%",
-        borderRadius:"2em"
+        borderRadius:"2em",
+        textDecoration: "none"
     },
     footersec:{
       [theme.breakpoints.down("sm")]:{
@@ -108,6 +110,27 @@ const useStyles = makeStyles((theme)=>({
         [theme.breakpoints.down("sm")]:{
             fontSize:"2em"
         }
+    },
+    footerLinks: {
+      marginRight: "10%",
+      marginLeft: "5%",
+      [theme.breakpoints.down("md")]:{
+          marginRight: "100px",
+          marginLeft: "100px"
+      },
+      [theme.breakpoints.down("sm")]:{
+          marginRight: "0px",
+          marginLeft: "0px"
+      }
+    },
+    footerIcons: {
+      marginRight: "5%",
+      [theme.breakpoints.down("md")]:{
+          marginRight: "0px",
+      },
+      [theme.breakpoints.down("sm")]:{
+          marginRight: "0px",
+      }
     }
 }))
 
@@ -122,10 +145,10 @@ const Footer = () =>{
                     </Typography>
                     <TextField
                     variant="outlined"
-                    placeholder="holapeeps7@gmail.com"
+                    placeholder="support@holapeeps.com"
                     className={classes.input}
                     InputProps={{
-                        endAdornment:<a href="mailto:holapeeps7@gmail.com"><Button variant="contained" color="secondary" className={classes.sendbut}>
+                        endAdornment:<a href="mailto:support@holapeeps.com" style={{textDecoration: "none"}}><Button variant="contained" color="secondary" className={classes.sendbut}>
                             Send
                         </Button></a>
                     }}
@@ -142,20 +165,21 @@ const Footer = () =>{
 
                 </Grid>
 
-                <Grid style={{display:"flex",justifyContent:"space-around",paddingTop:"5em"}}>
+                <Grid className={classes.footerLinks} style={{display:"flex",justifyContent:"space-around",paddingTop:"5em"}}>
                     <Grid>
                         <Typography variant="h6"  className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>About</Typography>
                         <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Press Kit</Typography>
                         <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Privacy Policy</Typography>
                     </Grid>
                     <Grid>
-                        <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Blog</Typography>
+                        <a href="https://www.holapeeps.com/blogs/fireside-chat-on-competitive-coding-with-karan-mashru" style={{textDecoration: "none", color: "#000"}} target="_blank">
+                          <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Blog</Typography>
+                        </a>
                         <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>FAQs</Typography>
                         <Typography variant="h6" className={classes.footertext} style={{fontFamily:"Montserrat, sans-serif",fontWeight:"600"}}>Feature Request</Typography>
                     </Grid>
                 </Grid>
-                <Grid style={{flex:"1 1 auto"}}></Grid>
-                <Grid className={Styles.socialLink} style={{padding:"4em 2em 0em 2em"}}>
+                <Grid className={clsx(Styles.socialLink, classes.footerIcons)} style={{padding:"4em 2em 0em 2em"}}>
                     <a href="https://www.facebook.com/Hola-Peeps-110276957770109" target="_blank">
                       <FacebookIcon className={classes.social} style={{color: "#000"}} />
                     </a>

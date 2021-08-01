@@ -263,10 +263,13 @@ const Homepage = () =>{
                  Find Your Community and speak your Heart out. <br></br>Give it a try & have fun!
                 </Typography>
             </Grid>
-            <Poster />
+
+            <Poster theme={theme} />
+
             <Grid container item justify="center" alignItems="center">
             <iframe className={classes.youtube} src="https://www.youtube.com/embed/kUOMT3HYyhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </Grid>
+
             <Grid container item  className={Styles.containmain} justify="space-between" >
                 <Grid item  justify="center" alignItems="center" className={classes.foottop} style={{textAlign:"center",alignSelf:"center"}}>
                     <Typography variant="h2"  className={classes.maintext1} >
@@ -278,6 +281,7 @@ const Homepage = () =>{
                       </a>
                     </Button>
                 </Grid>
+                
                 <Grid>
                     <img className={Styles.tiltimage} src={"https://res.cloudinary.com/marcos-yash/image/upload/v1621330176/Holapeeps/Group_26_ocdatw.png"}></img>
                 </Grid>

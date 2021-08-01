@@ -1,15 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Carousel from 'nuka-carousel';
+// import Carousel from 'nuka-carousel';
 import {makeStyles} from '@material-ui/core/styles';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 
 const useStyles = makeStyles((theme)=>({
     root:{
         flexGrow:1,
         padding:"4em 0em;"
+    },
+    newRoot: {
+      padding:"4em 1em",
+      [theme.breakpoints.down("sm")]:{
+          padding:"3em 0.5em",
+      },
+    },
+    caroImg: {
+      width: "80%",
+      margin: "auto",
+      [theme.breakpoints.down("sm")]:{
+          width: "94%",
+      },
     },
     appbar:{
         padding:"2em",
@@ -66,7 +81,7 @@ const useStyles = makeStyles((theme)=>({
 
 }));
 
-const Poster = () =>{
+const Poster = (props) =>{
     const First = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic1.webp";
     const Second = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic2.webp";
     const Third = "https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic3.webp";
@@ -81,9 +96,14 @@ const Poster = () =>{
 
     const classes = useStyles();
 
+    const theme = props.theme;
+
+    const matches = useMediaQuery(theme.breakpoints.up('sm'));
+
+
     return (
         <>
-            <Carousel className={classes.root} vertical="true"
+            {/*<Carousel className={classes.root} vertical="true"
                 renderCenterLeftControls={({currentSlide,slideCount,goToSlide}) => (
                     <ul style={{padding:"1em 3em"}}>
                         {[...Array(slideCount)].map((key,index)=><li className={index==currentSlide?classes.active:classes.simple} onClick={()=>goToSlide(index)}><div></div></li>)}
@@ -111,6 +131,57 @@ const Poster = () =>{
                     <img className={classes.image} src={Fifth}></img>
                     <img className={classes.simage} src={Mfifth}></img>
                 </Grid>
+            </Carousel>*/}
+            <Carousel className={classes.newRoot}
+              stopOnHover={false} autoPlay={true} infiniteLoop={true}
+              transitionTime={1000} interval={3000}
+              showThumbs={false} showStatus={false}
+              >
+                <div className={classes.caroImg}>
+                    {
+                      matches ? (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic1.webp" />
+                      ) : (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m1.webp" />
+                      )
+                    }
+                </div>
+                <div className={classes.caroImg}>
+                    {
+                      matches ? (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic2.webp" />
+                      ) : (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m2.webp" />
+                      )
+                    }
+                </div>
+                <div className={classes.caroImg}>
+                    {
+                      matches ? (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic3.webp" />
+                      ) : (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m3.webp" />
+                      )
+                    }
+                </div>
+                <div className={classes.caroImg}>
+                    {
+                      matches ? (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic1.webp" />
+                      ) : (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m4.webp" />
+                      )
+                    }
+                </div>
+                <div className={classes.caroImg}>
+                    {
+                      matches ? (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_pic1.webp" />
+                      ) : (
+                        <img src="https://holapeeps1403.sgp1.cdn.digitaloceanspaces.com/homepage/homepage_m5.webp" />
+                      )
+                    }
+                </div>
             </Carousel>
         </>
     );
